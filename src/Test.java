@@ -1,5 +1,5 @@
 import DoublyLinkedList.ElementNotInListException;
-import applications.DeleteDuplicate;
+import applications.DeleteDuplicateSLL;
 import applications.PalindromeDLL;
 
 public class Test {
@@ -18,9 +18,22 @@ public class Test {
 		// // What will this print?
 		// System.out.println( sll );
 
-		DeleteDuplicate dd = new DeleteDuplicate();
+		DeleteDuplicateSLL<Object> dd = new DeleteDuplicateSLL<Object>();
+		dd.addToFront( 100 );
+		dd.addToFront( 50);
+		dd.addToBack( 150);
+		dd.addToBack( 200);
+		dd.addToFront(0 );
+		dd.addToFront( 0);
+		dd.addToFront(100 );
+		System.out.println(dd);
 		dd.deleteDuplicate();
 
+		
+		
+		
+		
+		
 		PalindromeDLL<Object> dll = new PalindromeDLL<Object>();
 		dll.addToFront(3);
 		dll.addToFront(2);
