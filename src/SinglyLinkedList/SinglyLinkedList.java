@@ -12,7 +12,7 @@ package SinglyLinkedList;
 public class SinglyLinkedList<T>
 {
 
-	SinglyLinkedListNode<T> head;
+	protected SinglyLinkedListNode<T> head;
 
 
     public SinglyLinkedList( T element )
