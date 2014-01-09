@@ -1,5 +1,13 @@
 package applications;
 
+/**
+ * given a SLL and a number x, use x to partition the LL again.
+ * The node less than x should appear before x, otherwise after x.
+ * 
+ * simply to start by loop through the list and form the two partitions and finally merge them 
+ * 
+ */
+
 import SinglyLinkedList.SinglyLinkedList;
 import SinglyLinkedList.SinglyLinkedListNode;
 
@@ -15,14 +23,13 @@ public class PartitionSLL extends SinglyLinkedList<Integer> {
 		while (next != null) {
 
 			next = next.getNext();
-			
-			if (current.getElement() < x) {
 
-				// add the current node to f
+			if (current.getElement() < x) {// add the current node to first list
+
 				current.setNext(firstListNode);
 				firstListNode = current;
 
-			} else {
+			} else {// add the current node to second list
 				current.setNext(secondListNode);
 				secondListNode = current;
 			}
