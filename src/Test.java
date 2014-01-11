@@ -1,13 +1,14 @@
-import applications.DeleteDuplicateSLL;
-import applications.PalindromeDLL;
+import Exceptions.GeneralException;
+import applications.KthToLastSLL;
 import applications.PartitionSLL;
 
 public class Test {
 
 	/**
 	 * @param args
+	 * @throws GeneralException 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws GeneralException {
 		// SinglyLinkedList<Integer> sll = new SinglyLinkedList<Integer>();
 		// // Add the following elements to the back or front of the list.
 		// sll.addToFront( new Integer( 100 ) );
@@ -57,6 +58,16 @@ public class Test {
 		psll.partitionLinkedList(5);
 		System.out.println(psll);
 
+		
+		KthToLastSLL<Object> klsll = new KthToLastSLL<Object>();
+		klsll.addToFront(3);
+		klsll.addToFront(4);
+		klsll.addToFront(5);
+		klsll.addToFront(1);
+		klsll.addToFront(7);
+		System.out.println(klsll);
+		System.out.println(klsll.getKthToLastNode(4));
+		
 	}
 
 }
