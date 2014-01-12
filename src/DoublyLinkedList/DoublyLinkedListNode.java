@@ -6,6 +6,10 @@ public class DoublyLinkedListNode<T> {
 	private DoublyLinkedListNode<T> next;
 	private DoublyLinkedListNode<T> prev;
 
+	public DoublyLinkedListNode(){
+		this(null,null,null);
+	}
+	
 	// Creates a new doubly-linked list node with element elem, next pointer
 	// set to nxt, and previous pointer set to prv.
 	public DoublyLinkedListNode(T elem, DoublyLinkedListNode<T> prv,
