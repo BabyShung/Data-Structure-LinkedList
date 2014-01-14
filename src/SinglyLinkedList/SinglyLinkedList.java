@@ -1,4 +1,7 @@
 package SinglyLinkedList;
+
+import DoublyLinkedList.DoublyLinkedListNode;
+import DoublyLinkedList.ElementNotInListException;
  
 
 /**
@@ -36,7 +39,7 @@ public class SinglyLinkedList<T>
     
     
     public void addToBack( T element )
-    {
+    { 	
         SinglyLinkedListNode<T> cursor = head;
 
         while( cursor.getNext() != null )
@@ -50,6 +53,23 @@ public class SinglyLinkedList<T>
     public SinglyLinkedListNode<T> getHead(){
     	return head;
     }
+    
+	protected SinglyLinkedListNode<T> findNode(T elem)
+			throws ElementNotInListException {
+		
+		SinglyLinkedListNode<T> cursor = head.getNext();
+		
+		while (cursor != null && !cursor.getElement().equals(elem)) {
+			cursor = cursor.getNext();
+		}
+		
+		if (cursor == null) {
+			throw new ElementNotInListException("Element " + elem
+					+ " not in list.");
+		}
+		return cursor;
+	}
+    
     
     @Override
     public String toString( )

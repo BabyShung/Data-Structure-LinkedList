@@ -1,4 +1,6 @@
+import DoublyLinkedList.ElementNotInListException;
 import Exceptions.GeneralException;
+import applications.CyclicSLL;
 import applications.KthToLastSLL;
 import applications.PartitionSLL;
 
@@ -7,8 +9,9 @@ public class Test {
 	/**
 	 * @param args
 	 * @throws GeneralException 
+	 * @throws ElementNotInListException 
 	 */
-	public static void main(String[] args) throws GeneralException {
+	public static void main(String[] args) throws GeneralException, ElementNotInListException {
 		// SinglyLinkedList<Integer> sll = new SinglyLinkedList<Integer>();
 		// // Add the following elements to the back or front of the list.
 		// sll.addToFront( new Integer( 100 ) );
@@ -46,28 +49,45 @@ public class Test {
 //		System.out.println(dll.checkLinkedListPalindrome());
 		
 		
-		PartitionSLL psll = new PartitionSLL();
-		psll.addToFront(3);
-		psll.addToFront(2);
-		psll.addToFront(4);
-		psll.addToBack(7);
-		psll.addToBack(6);
-		psll.addToBack(1);
-		psll.addToBack(5);
-		System.out.println(psll);
-		psll.partitionLinkedList(5);
-		System.out.println(psll);
+//		PartitionSLL psll = new PartitionSLL();
+//		psll.addToFront(3);
+//		psll.addToFront(2);
+//		psll.addToFront(4);
+//		psll.addToBack(7);
+//		psll.addToBack(6);
+//		psll.addToBack(1);
+//		psll.addToBack(5);
+//		System.out.println(psll);
+//		psll.partitionLinkedList(5);
+//		System.out.println(psll);
 
 		
-		KthToLastSLL<Object> klsll = new KthToLastSLL<Object>();
-		klsll.addToFront(3);
-		klsll.addToFront(4);
-		klsll.addToFront(5);
-		klsll.addToFront(1);
-		klsll.addToFront(7);
-		System.out.println(klsll);
-		System.out.println(klsll.getKthToLastNode(4));
+//		KthToLastSLL<Object> klsll = new KthToLastSLL<Object>();
+//		klsll.addToFront(3);
+//		klsll.addToFront(4);
+//		klsll.addToFront(5);
+//		klsll.addToFront(1);
+//		klsll.addToFront(7);
+//		System.out.println(klsll);
+//		System.out.println(klsll.getKthToLastNode(4));
 		
+		
+		CyclicSLL<Object> csll = new CyclicSLL<>();
+		csll.addToFront(3);
+		csll.addToFront(4);
+		csll.addToFront(5);
+		csll.addToFront(1);
+		csll.addToFront(7);
+		csll.addToFront(2);
+		csll.addToFront(9);
+		csll.addToFront(10);
+		csll.addToFront(11);
+		csll.addToFront(21);
+		csll.addToFront(80);
+		
+		System.out.println(csll);
+		csll.setCyclic(2);
+		System.out.println(csll.getLoopStart());
 	}
 
 }

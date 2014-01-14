@@ -1,15 +1,18 @@
-package DoublyLinkedList;
+package applications;
 
 import java.util.Random;
 
-public class RandomLinkedList<T> extends DoublyLinkedList<T> {
+import DoublyLinkedList.DoublyLinkedList;
+import DoublyLinkedList.DoublyLinkedListNode;
+
+public class RandomDLL<T> extends DoublyLinkedList<T> {
 	// While you don't have to, I will keep the random number generator as
 	// an instance variable, created once when the list is created.
 	private Random randomGenerator;
 
 	// The empty-parameter constructor simply creates an empty linked list and
 	// initializes our random number generator
-	public RandomLinkedList() {
+	public RandomDLL() {
 		super();
 		randomGenerator = new Random();
 	}
@@ -17,7 +20,7 @@ public class RandomLinkedList<T> extends DoublyLinkedList<T> {
 	// The single-parameter constructor creates a linked list containing only
 	// one non-sentinel node, which holds elem. It also initializes our
 	// random number generator.
-	public RandomLinkedList(T elem) {
+	public RandomDLL(T elem) {
 		super(elem);
 		randomGenerator = new Random();
 	}
