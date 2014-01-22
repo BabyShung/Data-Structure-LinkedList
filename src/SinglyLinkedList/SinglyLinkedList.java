@@ -74,9 +74,9 @@ public class SinglyLinkedList<T>
     @Override
     public String toString( )
     {
-        String listString = "";
+        String listString = "HEAD -> ";
 
-        for( SinglyLinkedListNode<T> cursor = head; cursor != null;
+        for( SinglyLinkedListNode<T> cursor = head.getNext(); cursor != null;
                 cursor = cursor.getNext( ) )
         {
             listString += cursor.toString() + " -> ";

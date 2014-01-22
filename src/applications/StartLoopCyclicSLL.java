@@ -1,7 +1,7 @@
 package applications;
 
 /**
- * Question:
+ * Question1:
  * given a SLL,
  * first check if it is cyclic
  * 
@@ -16,12 +16,13 @@ package applications;
  * Then the two move at 1 step a time, after k steps they will meet.
  * And that place will be the loop-start.
  * 
+ * 
  */
 import DoublyLinkedList.ElementNotInListException;
 import SinglyLinkedList.SinglyLinkedList;
 import SinglyLinkedList.SinglyLinkedListNode;
 
-public class CyclicSLL<T> extends SinglyLinkedList<T> {
+public class StartLoopCyclicSLL<T> extends SinglyLinkedList<T> {
 
 	public void setCyclic(T element) throws ElementNotInListException {
 
@@ -60,4 +61,6 @@ public class CyclicSLL<T> extends SinglyLinkedList<T> {
 		return fast;
 	}
 
+
+	
 }

@@ -1,8 +1,8 @@
+import CicularSLL.CyclicSLL;
 import DoublyLinkedList.ElementNotInListException;
 import Exceptions.GeneralException;
-import applications.CyclicSLL;
-import applications.KthToLastSLL;
-import applications.PartitionSLL;
+import applications.StartLoopCyclicSLL;
+import applications.SortedCyclicSLL;
 
 public class Test {
 
@@ -72,22 +72,40 @@ public class Test {
 //		System.out.println(klsll.getKthToLastNode(4));
 		
 		
-		CyclicSLL<Object> csll = new CyclicSLL<>();
-		csll.addToFront(3);
-		csll.addToFront(4);
-		csll.addToFront(5);
-		csll.addToFront(1);
-		csll.addToFront(7);
-		csll.addToFront(2);
-		csll.addToFront(9);
-		csll.addToFront(10);
-		csll.addToFront(11);
-		csll.addToFront(21);
-		csll.addToFront(80);
+//		StartLoopCyclicSLL<Object> csll = new StartLoopCyclicSLL<>();
+//		csll.addToFront(3);
+//		csll.addToFront(4);
+//		csll.addToFront(5);
+//		csll.addToFront(1);
+//		csll.addToFront(7);
+//		csll.addToFront(2);
+//		csll.addToFront(9);
+//		csll.addToFront(10);
+//		csll.addToFront(11);
+//		csll.addToFront(21);
+//		csll.addToFront(80);
+//		
+//		System.out.println(csll);
+//		csll.setCyclic(80);
+//		System.out.println(csll.getLoopStart());
+//		
+//		
 		
+		CyclicSLL<Object>  csll = new CyclicSLL<Object>();
+		csll.addToBack(1);
+		csll.addToBack(2);
+		csll.addToBack(3);
 		System.out.println(csll);
-		csll.setCyclic(2);
-		System.out.println(csll.getLoopStart());
+		
+		SortedCyclicSLL scsll = new SortedCyclicSLL();
+
+		scsll.addToBack(4);
+		scsll.addToBack(9);
+		System.out.println(scsll);
+		scsll.insert(scsll.getHead(), 5);
+		System.out.println(scsll);
+		
+
 	}
 
 }
