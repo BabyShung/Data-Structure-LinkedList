@@ -1,6 +1,5 @@
 package SinglyLinkedList;
 
-import DoublyLinkedList.DoublyLinkedListNode;
 import DoublyLinkedList.ElementNotInListException;
  
 

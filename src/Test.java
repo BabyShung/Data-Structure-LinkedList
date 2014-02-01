@@ -1,7 +1,7 @@
 import CicularSLL.CyclicSLL;
 import DoublyLinkedList.ElementNotInListException;
 import Exceptions.GeneralException;
-import applications.StartLoopCyclicSLL;
+import applications.ReverseSLL;
 import applications.SortedCyclicSLL;
 
 public class Test {
@@ -105,6 +105,15 @@ public class Test {
 		scsll.insert(scsll.getHead(), 5);
 		System.out.println(scsll);
 		
+		
+		ReverseSLL rsll = new ReverseSLL();
+		rsll.addToFront(1);
+		rsll.addToFront(2);
+		rsll.addToFront(3);
+		rsll.addToFront(4);
+		System.out.println(rsll);
+		rsll.reverse();
+		System.out.println(rsll);
 
 	}
 
