@@ -2,6 +2,8 @@ package applications;
 
 /**
  * reverse a linkedlist
+ * 
+ * fundamental* with reverse a sting
  */
 
 import SinglyLinkedList.SinglyLinkedList;
@@ -15,7 +17,6 @@ public class ReverseSLL<T> extends SinglyLinkedList<T> {
 			return;
 
 		SinglyLinkedListNode<T> current, next, loop;
-
 		current = null;
 		next = head.getNext();
 		head.setNext(null);
@@ -27,7 +28,6 @@ public class ReverseSLL<T> extends SinglyLinkedList<T> {
 			current = next;
 			next = loop;
 		}
-
 		head.setNext(current);
 	}
 
