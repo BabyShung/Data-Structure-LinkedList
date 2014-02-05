@@ -31,8 +31,8 @@ public class StartLoopCyclicSLL<T> extends SinglyLinkedList<T> {
 		while (cursor.getNext() != null) {
 			cursor = cursor.getNext();
 		}
-		//cursor is the last node in SLL
-		//set cursor next to be a node in the list
+		// cursor is the last node in SLL
+		// set cursor next to be a node in the list
 		cursor.setNext(findNode(element));
 	}
 
@@ -61,6 +61,19 @@ public class StartLoopCyclicSLL<T> extends SinglyLinkedList<T> {
 		return fast;
 	}
 
+	public boolean checkCirlucarOrNot() {	//not good code
 
-	
+		SinglyLinkedListNode<T> slow = head, fast = head.getNext();
+		while (true) {
+			if (fast == null || fast.getNext() == null) {
+				return false;
+			} else if (fast == slow || fast.getNext() == slow) {
+				return true;
+			} else {
+				slow = slow.getNext();
+				fast = fast.getNext().getNext();
+			}
+		}
+	}
+
 }

@@ -13,7 +13,7 @@ package applications;
  * 
  */
 
-import CicularSLL.CyclicSLL;
+import CircularSLL.CyclicSLL;
 import SinglyLinkedList.SinglyLinkedListNode;
 
 public class SortedCyclicSLL extends CyclicSLL<Integer> {

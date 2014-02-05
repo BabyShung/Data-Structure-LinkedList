@@ -1,8 +1,9 @@
-import CicularSLL.CyclicSLL;
+import CircularSLL.CyclicSLL;
 import DoublyLinkedList.ElementNotInListException;
 import Exceptions.GeneralException;
 import applications.ReverseSLL;
 import applications.SortedCyclicSLL;
+import applications.StartLoopCyclicSLL;
 
 public class Test {
 
@@ -72,30 +73,30 @@ public class Test {
 //		System.out.println(klsll.getKthToLastNode(4));
 		
 		
-//		StartLoopCyclicSLL<Object> csll = new StartLoopCyclicSLL<>();
-//		csll.addToFront(3);
-//		csll.addToFront(4);
-//		csll.addToFront(5);
-//		csll.addToFront(1);
-//		csll.addToFront(7);
-//		csll.addToFront(2);
-//		csll.addToFront(9);
-//		csll.addToFront(10);
-//		csll.addToFront(11);
-//		csll.addToFront(21);
-//		csll.addToFront(80);
-//		
-//		System.out.println(csll);
-//		csll.setCyclic(80);
-//		System.out.println(csll.getLoopStart());
-//		
-//		
+		StartLoopCyclicSLL<Object> csll = new StartLoopCyclicSLL<>();
+		csll.addToFront(3);
+		csll.addToFront(4);
+		csll.addToFront(5);
+		csll.addToFront(1);
+		csll.addToFront(7);
+		csll.addToFront(2);
+		csll.addToFront(9);
+		csll.addToFront(10);
+		csll.addToFront(11);
+		csll.addToFront(21);
+		csll.addToFront(80);
 		
-		CyclicSLL<Object>  csll = new CyclicSLL<Object>();
-		csll.addToBack(1);
-		csll.addToBack(2);
-		csll.addToBack(3);
 		System.out.println(csll);
+		csll.setCyclic(80);
+		System.out.println(csll.checkCirlucarOrNot());
+		System.out.println(csll.getLoopStart());
+	
+		
+//		CyclicSLL<Object>  cysll = new CyclicSLL<Object>();
+//		cysll.addToBack(1);
+//		cysll.addToBack(2);
+//		cysll.addToBack(3);
+//		System.out.println(cysll);
 		
 		SortedCyclicSLL scsll = new SortedCyclicSLL();
 
@@ -106,15 +107,17 @@ public class Test {
 		System.out.println(scsll);
 		
 		
-		ReverseSLL rsll = new ReverseSLL();
+		ReverseSLL<Integer> rsll = new ReverseSLL<>();
 		rsll.addToFront(1);
 		rsll.addToFront(2);
 		rsll.addToFront(3);
 		rsll.addToFront(4);
+		rsll.addToFront(5);
 		System.out.println(rsll);
 		rsll.reverse();
 		System.out.println(rsll);
-
+		rsll.reverseRec();
+		System.out.println(rsll);
 	}
 
 }
