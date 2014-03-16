@@ -1,6 +1,6 @@
-import CircularSLL.CyclicSLL;
 import DoublyLinkedList.ElementNotInListException;
 import Exceptions.GeneralException;
+import applications.PartitionSLL;
 import applications.ReverseSLL;
 import applications.SortedCyclicSLL;
 import applications.StartLoopCyclicSLL;
@@ -50,17 +50,17 @@ public class Test {
 //		System.out.println(dll.checkLinkedListPalindrome());
 		
 		
-//		PartitionSLL psll = new PartitionSLL();
-//		psll.addToFront(3);
-//		psll.addToFront(2);
-//		psll.addToFront(4);
-//		psll.addToBack(7);
-//		psll.addToBack(6);
-//		psll.addToBack(1);
-//		psll.addToBack(5);
-//		System.out.println(psll);
-//		psll.partitionLinkedList(5);
-//		System.out.println(psll);
+		PartitionSLL psll = new PartitionSLL();
+		psll.addToFront(3);
+		psll.addToFront(2);
+		psll.addToFront(4);
+		psll.addToBack(7);
+		psll.addToBack(6);
+		psll.addToBack(1);
+		psll.addToBack(5);
+		System.out.println(psll);
+		psll.partitionLinkedList(5);
+		System.out.println(psll);
 
 		
 //		KthToLastSLL<Object> klsll = new KthToLastSLL<Object>();
