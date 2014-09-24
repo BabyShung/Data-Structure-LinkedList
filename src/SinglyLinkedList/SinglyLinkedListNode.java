@@ -14,10 +14,8 @@ public class SinglyLinkedListNode<T> {
 		this.next = next;
 	}
 
-	/********
-	 * references
-	 * @return
-	 */
+	// two getters and two setters, simply enough
+
 	public SinglyLinkedListNode<T> getNext() {
 		return next;
 	}
@@ -26,14 +24,10 @@ public class SinglyLinkedListNode<T> {
 		next = nxt;
 	}
 
-	
-	/*******
-	 * elements
-	 */
 	public T getElement() {
 		return element;
 	}
-	
+
 	public void setElement(T elem) {
 		element = elem;
 	}
